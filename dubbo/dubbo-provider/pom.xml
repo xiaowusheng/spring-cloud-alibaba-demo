@@ -42,6 +42,12 @@
       <artifactId>spring-cloud-starter-dubbo</artifactId>
     </dependency>
 
+    <!-- Spring Cloud Config -->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+    </dependency>
+
     <!-- Spring Cloud Nacos Service Discovery -->
     <dependency>
       <groupId>com.alibaba.cloud</groupId>
