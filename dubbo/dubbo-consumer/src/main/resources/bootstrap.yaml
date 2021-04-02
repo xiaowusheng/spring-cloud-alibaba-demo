@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: spring-cloud-alibaba-dubbo-consumer
+  main:
+    allow-bean-definition-overriding: true
+
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        register-enabled: true
+        server-addr: 10.1.60.21:8848
+
+
+
+
+

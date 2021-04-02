@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-cloud-alibaba-dubbo-provider
+  main:
+    allow-bean-definition-overriding: true
+
+  cloud:
+    nacos:
+      # Nacos 服务发现与注册配置
+      discovery:
+        server-addr: 10.1.60.21:8848
