@@ -11,3 +11,9 @@ spring:
       # Nacos 服务发现与注册配置
       discovery:
         server-addr: 10.1.60.21:8848
+
+
+    sentinel:
+      transport:
+        port: 8720
+        dashboard: 10.1.60.21:8080

@@ -84,9 +84,6 @@ public class StandardRestService implements RestService {
 		return result;
 	}
 
-	// @CookieParam does not support : https://github.com/OpenFeign/feign/issues/913
-	// @CookieValue also does not support
-
 	@Override
 	@Path("form")
 	@POST

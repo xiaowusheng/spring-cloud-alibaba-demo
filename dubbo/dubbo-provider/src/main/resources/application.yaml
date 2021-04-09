@@ -12,3 +12,26 @@ dubbo:
   registry:
     # 挂载到 Spring Cloud 注册中心
     address: spring-cloud://10.1.60.21
+
+logging:
+  level:
+    root: INFO
+    org.springframework: ERROR
+    org.springframework.ui: DEBUG
+    org.springframework.boot: DEBUG
+    org.springframework.cloud.config: DEBUG
+    #org.springframework.transaction: DEBUG
+    #org.springframework.jdbc.datasource: DEBUG
+    #org.mybatis: DEBUG
+    com.alibaba.nacos.client.naming: WARN
+    org.apache.dubbo: debug
+    org.apache.dubbo.remoting.exchange.support.header: WARN
+    com.nongfadai: DEBUG
+    springfox.documentation: ERROR
+    org.javers: ERROR
+    org.activiti: ERROR
+    com.aliyun: DEBUG
+  pattern:
+    level: rqId:%X{requestId} u:%X{user} %5p
+  file: /opt/deploy/logs/lambda.log
+  file.max-size: 50MB
