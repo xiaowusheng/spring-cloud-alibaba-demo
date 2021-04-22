@@ -12,6 +12,13 @@ dubbo:
   registry:
     # 挂载到 Spring Cloud 注册中心
     address: spring-cloud://10.1.60.21
+  provider:
+    loadbalance: random
+    timeout: 1000
+    retries: 0
+    actives: 200
+    threads: 200
+    executes: 200
 
 logging:
   level:
