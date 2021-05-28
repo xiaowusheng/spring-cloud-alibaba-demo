@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>sp-alibaba</artifactId>
-    <version>${revision}</version>
+    <version>1.0-SNAPSHOT</version>
     <modules>
         <module>nacos-config</module>
         <module>nacos-discovery</module>
@@ -22,6 +22,7 @@
 
     <properties>
         <revision>1.0-SNAPSHOT</revision>
+        <test1.version>0.0.1-SNAPSHOT</test1.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -185,6 +186,31 @@
                             <goal>jar</goal>
                         </goals>
                         <phase>package</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.1.0</version>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
